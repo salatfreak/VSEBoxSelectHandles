@@ -164,6 +164,8 @@ def register():
 
 # Unregister add-on
 def unregister():
+    global keymap
+    
     # Remove keymap
     for item in keymap.keymap_items: keymap.keymap_items.remove(item)
     keymap = None
