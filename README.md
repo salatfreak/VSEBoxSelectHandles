@@ -1,4 +1,4 @@
-# Drag sensitive select operator for blender Sequencer
+# Box select individual handles in Blenders Sequencer
 Blenders box select only lets you select entire strips in the sequence editor. Sometimes it's usefull to box select individual handles. This add-on allows you to do this with Ctrl-B or Ctrl-RMB. Ctrl-B adds to the selection while CTRL-RMB replaces it. By holding shift, you can remove handles and strips from the selection.
 
 ## Installation
