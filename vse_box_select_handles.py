@@ -5,7 +5,7 @@ bl_info = {
     "author": "Salatfreak",
     "version": (0, 2),
     "blender": (2, 80, 0),
-    "location": "Video Sequence Editor",
+    "location": "In the Video Sequence Editor press Ctrl-LMB or Ctrl-B",
     "wiki_url": "https://github.com/Salatfreak/VSEBoxSelectHandles",
     "tracker_url": "https://github.com/Salatfreak/VSEBoxSelectHandles/issues",
     "category": "Sequencer",

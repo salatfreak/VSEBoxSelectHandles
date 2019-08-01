@@ -1,5 +1,5 @@
 # Box select individual handles in Blenders Sequencer
-Blenders box select only lets you select entire strips in the sequence editor. Sometimes it's usefull to box select individual handles. This add-on allows you to do this with Ctrl-B or Ctrl-RMB. Ctrl-B adds to the selection while CTRL-RMB replaces it. By holding shift, you can remove handles and strips from the selection.
+Blenders box select only lets you select entire strips in the sequence editor. Sometimes it's usefull to box select individual handles. This add-on allows you to do this with Ctrl-B or Ctrl-LMB (Ctrl-RMB if you configured the RMB for selecting). Ctrl-B adds to the selection while CTRL-LMB replaces it. By holding shift, you can remove handles and strips from the selection.
 
 ## Installation
 1. Download the [vse_box_select_handles.py](https://github.com/Salatfreak/VSEBoxSelectHandles/raw/master/vse_box_select_handles.py) script
