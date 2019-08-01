@@ -36,10 +36,10 @@ class BoxSelectHandlesOperator(bpy.types.Operator):
         # Get mouse button roles
         keyconfig = context.window_manager.keyconfigs.active
         self._select_mouse = getattr(keyconfig.preferences, 'select_mouse', 'LEFT') + 'MOUSE'
-        self._cancel_mouse = 'RIGHTMOUSE' if self._select_mouse == 'LEFTMOUSE' else 'LEFTMOUSE'
+        other_mouse = 'RIGHTMOUSE' if self._select_mouse == 'LEFTMOUSE' else 'LEFTMOUSE'
             
         # Cancel if invoked by wrong mouse button
-        if event.type == self._cancel_mouse: return {'CANCELLED', 'PASS_THROUGH'}
+        if event.type == other_mouse: return {'CANCELLED', 'PASS_THROUGH'}
     
         # Get view
         view = context.area.regions[3].view2d
@@ -63,9 +63,12 @@ class BoxSelectHandlesOperator(bpy.types.Operator):
         # Get view
         view = context.area.regions[3].view2d
         
+        # Get mouse button to handle
+        mouse_button = 'LEFTMOUSE' if self.wait_for_input else self._select_mouse
+        
         # Handle inputs
         if self._state in {'FINISHED', 'CANCELLED'}: return {self._state}
-        if event.type == self._select_mouse:
+        if event.type == mouse_button:
             if self._state == 'WAIT' and not event.ctrl:
                 if event.value == 'PRESS':
                     if not self.extend: bpy.ops.sequencer.select_all(action='DESELECT')
